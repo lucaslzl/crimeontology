@@ -13,89 +13,10 @@
                                               <http://localhost:8090/ec2> ,
                                               <http://localhost:8090/theft> ,
                                               <http://localhost:8090/robbery> ,
+                                              <http://localhost:8090/quality> ,
                                               <http://localhost:8090/local> ,
                                               <http://localhost:8090/object> ,
                                               <http://localhost:8090/situation> .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/type
-<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespaceUri
-<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/usageNote
-<http://purl.org/vocab/vann/usageNote> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#broader
-<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#definition
-<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/homepage
-<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#anySimpleType
-xsd:anySimpleType rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
 
 #################################################################
 #    Object Properties
@@ -176,173 +97,14 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:range <http://localhost:8090/person#Victim> .
 
 
-###  http://purl.org/eis/vocab/daq#hasDimension
-<http://purl.org/eis/vocab/daq#hasDimension> rdf:type owl:ObjectProperty ;
-                                             owl:inverseOf <http://www.w3.org/ns/dqv#inCategory> .
-
-
-###  http://purl.org/eis/vocab/daq#hasMetric
-<http://purl.org/eis/vocab/daq#hasMetric> rdf:type owl:ObjectProperty .
-
-[ owl:inverseOf <http://purl.org/eis/vocab/daq#hasMetric> ;
-   rdfs:subPropertyOf <http://www.w3.org/ns/dqv#inDimension>
- ] .
-
-
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
 owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
                       rdfs:range <http://localhost:8090/crime#Crime> .
 
 
-###  http://www.w3.org/ns/dqv#hasQualityMeasurement
-<http://www.w3.org/ns/dqv#hasQualityMeasurement> rdf:type owl:ObjectProperty ;
-                                                 rdfs:range <http://www.w3.org/ns/dqv#QualityMeasurement> ;
-                                                 rdfs:comment "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
-                                                 rdfs:label "has quality measurement"@en .
-
-
-###  http://www.w3.org/ns/dqv#inCategory
-<http://www.w3.org/ns/dqv#inCategory> rdf:type owl:ObjectProperty ;
-                                      rdfs:domain <http://www.w3.org/ns/dqv#Dimension> ;
-                                      rdfs:range <http://www.w3.org/ns/dqv#Category> ;
-                                      <http://purl.org/vocab/vann/usageNote> "Categories are meant to systematically organize dimensions. The Data Quality Vocabulary defines no specific cardinality constraints for dqv:inCategory, since distinct quality frameworks might have different perspectives over a dimension. A dimension may therefore be associated to more than one category. However, those who define new quality metrics should try to avoid this as much as possible and assign only one category to the dimensions they define."@en ;
-                                      rdfs:comment "Represents the category a dimension is grouped in."@en ;
-                                      rdfs:label "in category"@en .
-
-
-###  http://www.w3.org/ns/dqv#inDimension
-<http://www.w3.org/ns/dqv#inDimension> rdf:type owl:ObjectProperty ;
-                                       rdfs:range <http://www.w3.org/ns/dqv#Dimension> ;
-                                       <http://purl.org/vocab/vann/usageNote> "Dimensions are meant to systematically organize metrics, quality certificates and quality annotations. The Data Quality Vocabulary defines no specific cardinality constraints for dqv:inDimension, since distinct quality frameworks might have different perspectives over a metric. A metric may therefore be associated to more than one dimension. However, those who define new quality metrics should try to avoid this as much as possible and assign only one dimension to the metrics they define. More than one dimension can be indicated for each quality annotation or certificate."@en ;
-                                       rdfs:comment "Represents the dimensions a quality metric, certificate and annotation allow a measurement of."@en ;
-                                       rdfs:label "in dimension"@en .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://www.w3.org/ns/dqv#expectedDataType
-<http://www.w3.org/ns/dqv#expectedDataType> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain <http://www.w3.org/ns/dqv#Metric> ;
-                                            rdfs:range xsd:anySimpleType ;
-                                            rdfs:comment "Represents the expected data type for metric's observed value (e.g. xsd:boolean, xsd:double etc...)"@en ;
-                                            rdfs:label "expected data type"@en .
-
-
-###  http://www.w3.org/ns/dqv#value
-<http://www.w3.org/ns/dqv#value> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain <http://www.w3.org/ns/dqv#QualityMeasurement> .
-
-
 #################################################################
 #    Classes
 #################################################################
-
-###  http://localhost:8090/crimevoc#Age
-:Age rdf:type owl:Class ;
-     rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#Completeness
-:Completeness rdf:type owl:Class ;
-              rdfs:subClassOf <http://purl.org/eis/vocab/daq#Dimension> .
-
-
-###  http://localhost:8090/crimevoc#CompletenessMetric
-:CompletenessMetric rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.w3.org/ns/dqv#Metric> .
-
-
-###  http://localhost:8090/crimevoc#Consistency
-:Consistency rdf:type owl:Class ;
-             rdfs:subClassOf <http://purl.org/eis/vocab/daq#Dimension> .
-
-
-###  http://localhost:8090/crimevoc#ConsistencyMetric
-:ConsistencyMetric rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/ns/dqv#Metric> .
-
-
-###  http://localhost:8090/crimevoc#CrimeWeapon
-:CrimeWeapon rdf:type owl:Class ;
-             rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#CriminalDescription
-:CriminalDescription rdf:type owl:Class ;
-                     rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#CriminalStatus
-:CriminalStatus rdf:type owl:Class ;
-                rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#Currentness
-:Currentness rdf:type owl:Class ;
-             rdfs:subClassOf <http://purl.org/eis/vocab/daq#Dimension> .
-
-
-###  http://localhost:8090/crimevoc#CurrentnessMetric
-:CurrentnessMetric rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/ns/dqv#Metric> .
-
-
-###  http://localhost:8090/crimevoc#ElapsedTime
-:ElapsedTime rdf:type owl:Class ;
-             rdfs:subClassOf :CurrentnessMetric .
-
-
-###  http://localhost:8090/crimevoc#Gender
-:Gender rdf:type owl:Class ;
-        rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#HairColor
-:HairColor rdf:type owl:Class ;
-           rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#Height
-:Height rdf:type owl:Class ;
-        rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#LocalInformed
-:LocalInformed rdf:type owl:Class ;
-               rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#ObjectStolen
-:ObjectStolen rdf:type owl:Class ;
-              rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#ReportTime
-:ReportTime rdf:type owl:Class ;
-            rdfs:subClassOf :CurrentnessMetric .
-
-
-###  http://localhost:8090/crimevoc#RobberyTime
-:RobberyTime rdf:type owl:Class ;
-             rdfs:subClassOf :CurrentnessMetric .
-
-
-###  http://localhost:8090/crimevoc#SystemTime
-:SystemTime rdf:type owl:Class ;
-            rdfs:subClassOf :CurrentnessMetric .
-
-
-###  http://localhost:8090/crimevoc#Tattoos
-:Tattoos rdf:type owl:Class ;
-         rdfs:subClassOf :CompletenessMetric .
-
-
-###  http://localhost:8090/crimevoc#VictimCondition
-:VictimCondition rdf:type owl:Class ;
-                 rdfs:subClassOf :CompletenessMetric .
-
 
 ###  http://localhost:8090/ec1#EC1
 <http://localhost:8090/ec1#EC1> owl:equivalentClass [ owl:intersectionOf ( <http://localhost:8090/ec#EC>
@@ -499,225 +261,152 @@ owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
                                                         ] .
 
 
-###  http://purl.org/eis/vocab/daq#Category
-<http://purl.org/eis/vocab/daq#Category> rdf:type owl:Class ;
-                                         owl:equivalentClass <http://www.w3.org/ns/dqv#Category> .
-
-
-###  http://purl.org/eis/vocab/daq#Dimension
-<http://purl.org/eis/vocab/daq#Dimension> rdf:type owl:Class ;
-                                          owl:equivalentClass <http://www.w3.org/ns/dqv#Dimension> .
-
-
-###  http://purl.org/eis/vocab/daq#Metric
-<http://purl.org/eis/vocab/daq#Metric> rdf:type owl:Class ;
-                                       owl:equivalentClass <http://www.w3.org/ns/dqv#Metric> .
-
-
-###  http://purl.org/eis/vocab/daq#Observation
-<http://purl.org/eis/vocab/daq#Observation> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://www.w3.org/ns/dqv#QualityMeasurement> .
-
-
-###  http://purl.org/eis/vocab/daq#QualityGraph
-<http://purl.org/eis/vocab/daq#QualityGraph> rdf:type owl:Class ;
-                                             owl:equivalentClass <http://www.w3.org/ns/dqv#QualityMeasurementDataset> .
-
-
-###  http://purl.org/linked-data/cube#DataSet
-<http://purl.org/linked-data/cube#DataSet> rdf:type owl:Class .
-
-
-###  http://purl.org/linked-data/cube#MeasureProperty
-<http://purl.org/linked-data/cube#MeasureProperty> rdf:type owl:Class .
-
-
-###  http://purl.org/linked-data/cube#Observation
-<http://purl.org/linked-data/cube#Observation> rdf:type owl:Class .
-
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
-
-
-###  http://www.w3.org/2004/03/trix/rdfg-1/Graph
-<http://www.w3.org/2004/03/trix/rdfg-1/Graph> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/dqv#Category
-<http://www.w3.org/ns/dqv#Category> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                    rdfs:comment "Represents a group of quality dimensions in which a common type of information is used as quality indicator."@en ;
-                                    rdfs:label "Category"@en .
-
-
-###  http://www.w3.org/ns/dqv#Dimension
-<http://www.w3.org/ns/dqv#Dimension> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                     rdfs:comment "Represents criteria relevant for assessing quality. Each quality dimension must have one or more metric to measure it. A dimension is linked with a category using the dqv:inCategory property."@en ;
-                                     rdfs:label "Dimension"@en .
-
-
-###  http://www.w3.org/ns/dqv#Metric
-<http://www.w3.org/ns/dqv#Metric> rdf:type owl:Class ;
-                                  rdfs:comment "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en ;
-                                  rdfs:label "Metric"@en .
-
-
-###  http://www.w3.org/ns/dqv#QualityMeasurement
-<http://www.w3.org/ns/dqv#QualityMeasurement> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.org/linked-data/cube#Observation> ;
-                                              <http://purl.org/vocab/vann/usageNote> "The unit of measure in quality measurement should be specified through the property sdmx-attribute:unitMeasure as recommended by RDF Data Cube. The Ontology of units of Measure (OM) by Rijgersberg Et Al provides a list of HTTP dereferenceable unit of measures, which can be exploited as values for sdmx-attribute:unitMeasure."@en ;
-                                              rdfs:comment "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en ;
-                                              rdfs:label "Quality Measurement"@en .
-
-
-###  http://www.w3.org/ns/dqv#QualityMeasurementDataset
-<http://www.w3.org/ns/dqv#QualityMeasurementDataset> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://purl.org/linked-data/cube#DataSet> ;
-                                                     rdfs:comment "Represents a dataset of quality measurements, evaluations of one or more datasets (or dataset distributions) against specific quality metrics."@en ;
-                                                     rdfs:label "Quality Measurement Dataset"@en .
-
-
-###  http://www.w3.org/ns/dqv#QualityMetadata
-<http://www.w3.org/ns/dqv#QualityMetadata> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
-                                           <http://purl.org/vocab/vann/usageNote> "QualityMetadata containers do not necessary include all types of quality statements DQV can support. Implementers decide the granularity of containment. In the current version of DQV, we also leave open the choice of the containment technique. Implementers can use (RDF) graph containment. They may also use an appropriate property of their choice — for example (a subproperty of) dcterms:hasPart — to link instances of dqv:QualityMetadata with instances of other DQV classes."@en ;
-                                           rdfs:comment "Represents quality metadata, it is defined to group quality certificates, policies, measurements and annotations under a named graph."@en ;
-                                           rdfs:label "Quality Metadata"@en .
-
-
-###  http://www.w3.org/ns/oa#Motivation
-<http://www.w3.org/ns/oa#Motivation> rdf:type owl:Class .
-
-
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://localhost:8090/crimevoc#availabilityid1
-:availabilityid1 rdf:type owl:NamedIndividual ,
-                          <http://www.w3.org/ns/dqv#QualityMeasurement> ;
-                 <http://www.w3.org/ns/dqv#hasQualityMeasurement> :availabilityid1 ;
-                 <http://www.w3.org/ns/dqv#value> 10 .
+###  http://localhost:8090/crimevoc#AgeMetric
+:AgeMetric rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/dqv#Metric> ;
+           <http://www.w3.org/ns/dqv#inDimension> :Completeness .
 
 
-###  http://localhost:8090/crimevoc#compl1
-:compl1 rdf:type owl:NamedIndividual ,
-                 :Completeness ;
-        <http://purl.org/eis/vocab/daq#hasMetric> :metriccd1 ,
-                                                  :metriccw1 ,
-                                                  :metricos1 .
+###  http://localhost:8090/crimevoc#Completeness
+:Completeness rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Dimension> .
 
 
-###  http://localhost:8090/crimevoc#consis1
-:consis1 rdf:type owl:NamedIndividual ,
-                  :Consistency .
+###  http://localhost:8090/crimevoc#CompletenessMetric
+:CompletenessMetric rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/dqv#Metric> ;
+                    <http://www.w3.org/ns/dqv#inDimension> :Completeness .
 
 
-###  http://localhost:8090/crimevoc#criminalid1
-:criminalid1 rdf:type owl:NamedIndividual ,
-                      <http://localhost:8090/person#Criminal> ;
-             <http://localhost:8090/person#age> 20 ;
-             <http://localhost:8090/person#gender> "male" .
+###  http://localhost:8090/crimevoc#Consistency
+:Consistency rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/dqv#Dimension> .
 
 
-###  http://localhost:8090/crimevoc#curren1
-:curren1 rdf:type owl:NamedIndividual ,
-                  :Currentness .
+###  http://localhost:8090/crimevoc#ConsistencyMetric
+:ConsistencyMetric rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/dqv#Metric> ;
+                   <http://www.w3.org/ns/dqv#inDimension> :Consistency .
+
+
+###  http://localhost:8090/crimevoc#CrimeWeaponMetric
+:CrimeWeaponMetric rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/dqv#Metric> ;
+                   <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#CriminalDescriptionMetric
+:CriminalDescriptionMetric rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/dqv#Metric> ;
+                           <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#CriminalStatusMetric
+:CriminalStatusMetric rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/dqv#Metric> ;
+                      <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#Currentness
+:Currentness rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/dqv#Dimension> .
+
+
+###  http://localhost:8090/crimevoc#CurrentnessMetric
+:CurrentnessMetric rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/dqv#Metric> ;
+                   <http://www.w3.org/ns/dqv#inDimension> :Currentness .
+
+
+###  http://localhost:8090/crimevoc#ElapsedTimeMetric
+:ElapsedTimeMetric rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/dqv#Metric> ;
+                   <http://www.w3.org/ns/dqv#inDimension> :Currentness .
+
+
+###  http://localhost:8090/crimevoc#GenderMetric
+:GenderMetric rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Metric> ;
+              <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#HairColorMetric
+:HairColorMetric rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/dqv#Metric> ;
+                 <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#HeightMetric
+:HeightMetric rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Metric> ;
+              <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#LocalInformedMetric
+:LocalInformedMetric rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/dqv#Metric> ;
+                     <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#ObjectStolenMetric
+:ObjectStolenMetric rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/dqv#Metric> ;
+                    <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#ReportTimeMetric
+:ReportTimeMetric rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/dqv#Metric> ;
+                  <http://www.w3.org/ns/dqv#inDimension> :Currentness .
+
+
+###  http://localhost:8090/crimevoc#RobberyTimeMetric
+:RobberyTimeMetric rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/dqv#Metric> ;
+                   <http://www.w3.org/ns/dqv#inDimension> :Currentness .
+
+
+###  http://localhost:8090/crimevoc#SystemTimeMetric
+:SystemTimeMetric rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/dqv#Metric> ;
+                  <http://www.w3.org/ns/dqv#inDimension> :Currentness .
+
+
+###  http://localhost:8090/crimevoc#TattoosMetric
+:TattoosMetric rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/dqv#Metric> ;
+               <http://www.w3.org/ns/dqv#inDimension> :Completeness .
+
+
+###  http://localhost:8090/crimevoc#VictimConditionMetric
+:VictimConditionMetric rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/ns/dqv#Metric> ;
+                       <http://www.w3.org/ns/dqv#inDimension> :Completeness .
 
 
 ###  http://localhost:8090/crimevoc#graph1
 :graph1 rdf:type owl:NamedIndividual ,
                  <http://purl.org/eis/vocab/daq#QualityGraph> ;
-        <http://purl.org/eis/vocab/daq#hasDimension> :compl1 ,
-                                                     :consis1 ,
-                                                     :curren1 .
+        <http://www.w3.org/ns/dqv#hasQualityMeasurement> :qlt1 ,
+                                                         :qlt2 .
 
 
-###  http://localhost:8090/crimevoc#metriccd1
-:metriccd1 rdf:type owl:NamedIndividual ,
-                    :CriminalDescription ;
-           <http://www.w3.org/ns/dqv#value> 0 .
+###  http://localhost:8090/crimevoc#qlt1
+:qlt1 rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/ns/dqv#QualityMeasurement> ;
+      <http://www.w3.org/ns/dqv#isMeasurementOf> :ConsistencyMetric ;
+      <http://www.w3.org/ns/dqv#value> 10 .
 
 
-###  http://localhost:8090/crimevoc#metriccw1
-:metriccw1 rdf:type owl:NamedIndividual ,
-                    :CrimeWeapon ;
-           <http://www.w3.org/ns/dqv#value> 1 .
-
-
-###  http://localhost:8090/crimevoc#metricos1
-:metricos1 rdf:type owl:NamedIndividual ,
-                    :ObjectStolen ;
-           <http://www.w3.org/ns/dqv#value> 1 .
-
-
-###  http://www.w3.org/ns/dqv
-<http://www.w3.org/ns/dqv> rdf:type owl:NamedIndividual ;
-                           <http://purl.org/dc/terms/contributor> [ <http://xmlns.com/foaf/0.1/name> "Amrapali Zaveri"
-                                                                  ] ,
-                                                                  [ <http://xmlns.com/foaf/0.1/name> "Nandana Mihindukulasooriya"
-                                                                  ] ,
-                                                                  [ <http://xmlns.com/foaf/0.1/name> "Christophe Guéret"
-                                                                  ] ,
-                                                                  [ <http://xmlns.com/foaf/0.1/name> "Makx Dekkers"
-                                                                  ] ,
-                                                                  [ <http://xmlns.com/foaf/0.1/name> "Deirdre Lee"
-                                                                  ] ,
-                                                                  [ <http://xmlns.com/foaf/0.1/name> "Jeremy Debattista"
-                                                                  ] ;
-                           <http://purl.org/dc/terms/created> "2015-12-17"^^xsd:date ;
-                           <http://purl.org/dc/terms/creator> [ <http://xmlns.com/foaf/0.1/name> "Riccardo Albertoni"
-                                                              ] ,
-                                                              [ <http://xmlns.com/foaf/0.1/name> "Antoine Isaac"
-                                                              ] ;
-                           <http://purl.org/dc/terms/description> "The Data Quality Vocabulary (DQV) is seen as an extension to DCAT to cover the quality of the data, how frequently is it updated, whether it accepts user corrections, persistence commitments etc. When used by publishers, this vocabulary will foster trust in the data amongst developers."@en ;
-                           <http://purl.org/dc/terms/modified> "2016-08-26"^^xsd:date ,
-                                                               "2016-12-15"^^xsd:date ;
-                           <http://purl.org/dc/terms/publisher> <http://www.w3.org/data#W3C> ;
-                           <http://purl.org/dc/terms/title> "Data Quality Vocabulary"@en ;
-                           <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> ;
-                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "dqv" ;
-                           <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/ns/dqv#" ;
-                           <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/TR/vocab-dqv/> .
-
-
-###  http://www.w3.org/ns/dqv#computedOn
-<http://www.w3.org/ns/dqv#computedOn> rdf:type owl:NamedIndividual .
-
-
-###  http://www.w3.org/ns/dqv#isMeasurementOf
-<http://www.w3.org/ns/dqv#isMeasurementOf> rdf:type owl:NamedIndividual .
-
-
-###  http://www.w3.org/ns/dqv#precision
-<http://www.w3.org/ns/dqv#precision> rdf:type owl:NamedIndividual ,
-                                              <http://www.w3.org/ns/dqv#Dimension> ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> "Precision is a quality dimension, which refers to the recorded level of details. It represents the exactness of a measurement or description. It is equivalent the notion of Precision from ISO 25012."@en ;
-                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Precision"@en .
-
-
-###  http://www.w3.org/ns/dqv#qualityAssessment
-<http://www.w3.org/ns/dqv#qualityAssessment> rdf:type owl:NamedIndividual ,
-                                                      <http://www.w3.org/ns/oa#Motivation> ;
-                                             <http://purl.org/vocab/vann/usageNote> "Whenever DQV implementers need to extend the motivations for quality annotations, they should follow the instructions provided by the Web Annotation Data Model, and the concepts in the extension should be defined as specializations of dqv:qualityAssessment."@en ;
-                                             <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/oa#assessing> ;
-                                             <http://www.w3.org/2004/02/skos/core#definition> "Motivation that must be specified for quality annotations."@en ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Quality assessment"@en .
-
-
-###  http://www.w3.org/ns/dqv#value
-<http://www.w3.org/ns/dqv#value> rdf:type owl:NamedIndividual ,
-                                          <http://purl.org/linked-data/cube#MeasureProperty> .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-<http://www.w3.org/ns/dqv#value> rdfs:comment "Refers to values computed by metric."@en ;
-                                 rdfs:label "value"@en .
+###  http://localhost:8090/crimevoc#qlt2
+:qlt2 rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/ns/dqv#QualityMeasurement> ;
+      <http://www.w3.org/ns/dqv#isMeasurementOf> :CompletenessMetric ;
+      <http://www.w3.org/ns/dqv#value> "90%" .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

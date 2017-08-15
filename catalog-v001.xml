@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://localhost:8090/quality" uri="quality.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/lucasladeira/ontologies/2017/7/untitled-ontology-259" uri="quality.owl"/>
     <uri id="Imports Wizard Entry" name="http://localhost:8090/situation" uri="situation/situation.owl"/>
     <uri id="User Entered Import Resolution" name="http://localhost:8090/crime" uri="crimes/crime.owl"/>
     <uri id="User Entered Import Resolution" name="http://localhost:8090/ec" uri="ecs/ec.owl"/>
