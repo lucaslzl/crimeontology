@@ -22,20 +22,28 @@
 #    Object Properties
 #################################################################
 
-###  http://localhost:8090/crimevoc#accomplished
-:accomplished rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty .
+###  http://localhost:8090/crimevoc#accomplishedBy
+:accomplishedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:AsymmetricProperty ;
+                rdfs:domain <http://localhost:8090/crime#Crime> ;
+                rdfs:range <http://localhost:8090/person#Criminal> .
 
 
 ###  http://localhost:8090/crimevoc#affects
 :affects rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf owl:topObjectProperty .
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:AsymmetricProperty ;
+         rdfs:domain <http://localhost:8090/crime#Crime> ;
+         rdfs:range <http://localhost:8090/person#Victim> .
 
 
 ###  http://localhost:8090/crimevoc#classify
 :classify rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
-          rdf:type owl:AsymmetricProperty .
+          rdf:type owl:AsymmetricProperty ;
+          rdfs:domain <http://localhost:8090/ec#EC> ;
+          rdfs:range <http://localhost:8090/crime#Crime> .
 
 
 ###  http://localhost:8090/crimevoc#happensAt
@@ -44,7 +52,7 @@
            rdf:type owl:AsymmetricProperty ;
            rdfs:domain <http://localhost:8090/crime#Crime> ;
            rdfs:range [ rdf:type owl:Restriction ;
-                        owl:onProperty :partOf ;
+                        owl:onProperty :happensAt ;
                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass <http://localhost:8090/local#Local>
                       ] .
@@ -58,7 +66,10 @@
 
 ###  http://localhost:8090/crimevoc#hasContactWith
 :hasContactWith rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty .
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:SymmetricProperty ;
+                rdfs:domain <http://localhost:8090/crime#Crime> ;
+                rdfs:range <http://localhost:8090/person#Victim> .
 
 
 ###  http://localhost:8090/crimevoc#hold
@@ -69,7 +80,17 @@
 ###  http://localhost:8090/crimevoc#isRobbedBy
 :isRobbedBy rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
-            rdf:type owl:AsymmetricProperty .
+            rdf:type owl:AsymmetricProperty ;
+            rdfs:domain <http://localhost:8090/person#Victim> ;
+            rdfs:range <http://localhost:8090/person#Criminal> .
+
+
+###  http://localhost:8090/crimevoc#isThieveBy
+:isThieveBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:AsymmetricProperty ;
+            rdfs:domain <http://localhost:8090/person#Victim> ;
+            rdfs:range <http://localhost:8090/person#Criminal> .
 
 
 ###  http://localhost:8090/crimevoc#own
@@ -80,7 +101,9 @@
 ###  http://localhost:8090/crimevoc#partOf
 :partOf rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf owl:topObjectProperty ;
-        rdf:type owl:AsymmetricProperty .
+        rdf:type owl:AsymmetricProperty ;
+        rdfs:domain <http://localhost:8090/object#Ammunition> ;
+        rdfs:range <http://localhost:8090/object#Weapon> .
 
 
 ###  http://localhost:8090/crimevoc#rob
@@ -95,11 +118,6 @@
         rdfs:subPropertyOf owl:topObjectProperty ;
         rdfs:domain <http://localhost:8090/person#Criminal> ;
         rdfs:range <http://localhost:8090/person#Victim> .
-
-
-###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
-                      rdfs:range <http://localhost:8090/crime#Crime> .
 
 
 #################################################################
@@ -191,19 +209,8 @@ owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
 
 ###  http://localhost:8090/robbery#Robbery
 <http://localhost:8090/robbery#Robbery> owl:equivalentClass [ owl:intersectionOf ( <http://localhost:8090/crime#Crime>
-                                                                                   [ rdf:type owl:Class ;
-                                                                                     owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                     owl:onProperty :hasContactWith ;
-                                                                                                     owl:someValuesFrom <http://localhost:8090/person#Criminal>
-                                                                                                   ]
-                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                     owl:onProperty :hasContactWith ;
-                                                                                                     owl:someValuesFrom <http://localhost:8090/person#Victim>
-                                                                                                   ]
-                                                                                                 )
-                                                                                   ]
                                                                                    [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty :accomplished ;
+                                                                                     owl:onProperty :accomplishedBy ;
                                                                                      owl:someValuesFrom <http://localhost:8090/person#Criminal>
                                                                                    ]
                                                                                    [ rdf:type owl:Restriction ;
@@ -215,8 +222,12 @@ owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
                                                                                      owl:someValuesFrom <http://localhost:8090/local#Local>
                                                                                    ]
                                                                                    [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty :own ;
+                                                                                     owl:onProperty :has ;
                                                                                      owl:someValuesFrom <http://localhost:8090/object#Object>
+                                                                                   ]
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty :hasContactWith ;
+                                                                                     owl:someValuesFrom <http://localhost:8090/person#Victim>
                                                                                    ]
                                                                                  ) ;
                                                               rdf:type owl:Class
@@ -226,22 +237,13 @@ owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
 ###  http://localhost:8090/theft#Theft
 <http://localhost:8090/theft#Theft> owl:equivalentClass [ owl:intersectionOf ( <http://localhost:8090/crime#Crime>
                                                                                [ rdf:type owl:Class ;
-                                                                                 owl:unionOf ( [ rdf:type owl:Class ;
-                                                                                                 owl:complementOf [ rdf:type owl:Restriction ;
-                                                                                                                    owl:onProperty :hasContactWith ;
-                                                                                                                    owl:someValuesFrom <http://localhost:8090/person#Criminal>
-                                                                                                                  ]
-                                                                                               ]
-                                                                                               [ rdf:type owl:Class ;
-                                                                                                 owl:complementOf [ rdf:type owl:Restriction ;
-                                                                                                                    owl:onProperty :hasContactWith ;
-                                                                                                                    owl:someValuesFrom <http://localhost:8090/person#Victim>
-                                                                                                                  ]
-                                                                                               ]
-                                                                                             )
+                                                                                 owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty :hasContactWith ;
+                                                                                                    owl:someValuesFrom <http://localhost:8090/person#Victim>
+                                                                                                  ]
                                                                                ]
                                                                                [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty :accomplished ;
+                                                                                 owl:onProperty :accomplishedBy ;
                                                                                  owl:someValuesFrom <http://localhost:8090/person#Criminal>
                                                                                ]
                                                                                [ rdf:type owl:Restriction ;
@@ -253,7 +255,7 @@ owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
                                                                                  owl:someValuesFrom <http://localhost:8090/local#Local>
                                                                                ]
                                                                                [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty :own ;
+                                                                                 owl:onProperty :has ;
                                                                                  owl:someValuesFrom <http://localhost:8090/object#Object>
                                                                                ]
                                                                              ) ;

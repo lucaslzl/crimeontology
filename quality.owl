@@ -163,10 +163,6 @@ _:genid1 owl:inverseOf <http://purl.org/eis/vocab/daq#hasMetric> ;
 
 <http://www.w3.org/ns/oa#hasTarget> a owl:ObjectProperty .
 # 
-# http://www.w3.org/ns/oa#motivation
-
-<http://www.w3.org/ns/oa#motivation> a owl:ObjectProperty .
-# 
 # 
 # 
 # #################################################################
@@ -325,13 +321,13 @@ _:genid2 <http://xmlns.com/foaf/0.1/name> "Antoine Isaac" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/creator> _:genid3 .
 
-_:genid3 <http://xmlns.com/foaf/0.1/name> "Antoine Isaac" .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Riccardo Albertoni" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> ;
 	<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/TR/vocab-dqv/> ;
 	<http://purl.org/dc/terms/contributor> _:genid4 .
 
-_:genid4 <http://xmlns.com/foaf/0.1/name> "Christophe Guéret" .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Amrapali Zaveri" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/contributor> _:genid5 .
 
@@ -343,15 +339,15 @@ _:genid6 <http://xmlns.com/foaf/0.1/name> "Nandana Mihindukulasooriya" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/contributor> _:genid7 .
 
-_:genid7 <http://xmlns.com/foaf/0.1/name> "Amrapali Zaveri" .
+_:genid7 <http://xmlns.com/foaf/0.1/name> "Makx Dekkers" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/contributor> _:genid8 .
 
-_:genid8 <http://xmlns.com/foaf/0.1/name> "Christophe Guéret" .
+_:genid8 <http://xmlns.com/foaf/0.1/name> "Jeremy Debattista" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/contributor> _:genid9 .
 
-_:genid9 <http://xmlns.com/foaf/0.1/name> "Jeremy Debattista" .
+_:genid9 <http://xmlns.com/foaf/0.1/name> "Christophe Guéret" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/creator> _:genid10 .
 
@@ -360,7 +356,7 @@ _:genid10 <http://xmlns.com/foaf/0.1/name> "Riccardo Albertoni" .
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/modified> "2016-08-26"^^xsd:date ;
 	<http://purl.org/dc/terms/creator> _:genid11 .
 
-_:genid11 <http://xmlns.com/foaf/0.1/name> "Riccardo Albertoni" .
+_:genid11 <http://xmlns.com/foaf/0.1/name> "Antoine Isaac" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/description> "The Data Quality Vocabulary (DQV) is seen as an extension to DCAT to cover the quality of the data, how frequently is it updated, whether it accepts user corrections, persistence commitments etc. When used by publishers, this vocabulary will foster trust in the data amongst developers."@en ;
 	<http://purl.org/dc/terms/publisher> <http://www.w3.org/data#W3C> ;
@@ -368,30 +364,30 @@ _:genid11 <http://xmlns.com/foaf/0.1/name> "Riccardo Albertoni" .
 	<http://purl.org/dc/terms/title> "Data Quality Vocabulary"@en ;
 	<http://purl.org/dc/terms/contributor> _:genid12 .
 
-_:genid12 <http://xmlns.com/foaf/0.1/name> "Makx Dekkers" .
+_:genid12 <http://xmlns.com/foaf/0.1/name> "Jeremy Debattista" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/ns/dqv#" ;
 	<http://purl.org/dc/terms/contributor> _:genid13 .
 
-_:genid13 <http://xmlns.com/foaf/0.1/name> "Amrapali Zaveri" .
+_:genid13 <http://xmlns.com/foaf/0.1/name> "Christophe Guéret" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/contributor> _:genid14 .
 
-_:genid14 <http://xmlns.com/foaf/0.1/name> "Deirdre Lee" .
+_:genid14 <http://xmlns.com/foaf/0.1/name> "Amrapali Zaveri" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/contributor> _:genid15 .
 
-_:genid15 <http://xmlns.com/foaf/0.1/name> "Makx Dekkers" .
+_:genid15 <http://xmlns.com/foaf/0.1/name> "Deirdre Lee" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/modified> "2016-12-15"^^xsd:date ;
 	<http://purl.org/vocab/vann/preferredNamespacePrefix> "dqv" ;
 	<http://purl.org/dc/terms/contributor> _:genid16 .
 
-_:genid16 <http://xmlns.com/foaf/0.1/name> "Jeremy Debattista" .
+_:genid16 <http://xmlns.com/foaf/0.1/name> "Deirdre Lee" .
 
 <http://www.w3.org/ns/dqv> <http://purl.org/dc/terms/contributor> _:genid17 .
 
-_:genid17 <http://xmlns.com/foaf/0.1/name> "Deirdre Lee" .
+_:genid17 <http://xmlns.com/foaf/0.1/name> "Makx Dekkers" .
 # 
 
 <http://www.w3.org/ns/dqv#computedOn> rdfs:label "computed on"@en ;
