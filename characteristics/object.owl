@@ -103,6 +103,11 @@
        rdfs:subClassOf :Drug .
 
 
+###  http://localhost:8090/object#LightWeapon
+:LightWeapon rdf:type owl:Class ;
+             rdfs:subClassOf :Weapon .
+
+
 ###  http://localhost:8090/object#Object
 :Object rdf:type owl:Class .
 
@@ -110,11 +115,6 @@
 ###  http://localhost:8090/object#SpecialWeapon
 :SpecialWeapon rdf:type owl:Class ;
                rdfs:subClassOf :Weapon .
-
-
-###  http://localhost:8090/object#SteelWeapon
-:SteelWeapon rdf:type owl:Class ;
-             rdfs:subClassOf :Weapon .
 
 
 ###  http://localhost:8090/object#Vehicle
