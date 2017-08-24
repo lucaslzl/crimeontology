@@ -120,6 +120,10 @@
         rdfs:range <http://localhost:8090/person#Victim> .
 
 
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain <http://localhost:8090/ec#EC> ;
+                      rdfs:range <http://localhost:8090/crime#Crime> .
+
 #################################################################
 #    Classes
 #################################################################
