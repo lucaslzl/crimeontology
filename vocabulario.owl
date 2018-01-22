@@ -1021,9 +1021,9 @@ As questões que esta ontologia busca responder são:
     
 
 
-    <!-- http://localhost:8090/objeto#Eletronic -->
+    <!-- http://localhost:8090/objeto#Electronic -->
 
-    <rdf:Description rdf:about="http://localhost:8090/objeto#Eletronic">
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Electronic">
         <rdfs:comment xml:lang="pt">Classe derivada de Objeto, que representa todos os tipos eletrônicos presentes em residências e comércios, dando foco para objetos passíveis de roubo e furto</rdfs:comment>
         <rdfs:label xml:lang="en">Eletronic</rdfs:label>
     </rdf:Description>
@@ -2123,7 +2123,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#computador -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#computador">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -2349,7 +2349,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#eletronico -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#eletronico">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -2703,7 +2703,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#home_theater -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#home_theater">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -2841,7 +2841,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#laptop -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#laptop">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -3035,7 +3035,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#microsystem -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#microsystem">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -3154,7 +3154,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#note -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#note">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -3162,7 +3162,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#notebook -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#notebook">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -3786,7 +3786,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#televisao -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#televisao">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 
@@ -3860,7 +3860,7 @@ As questões que esta ontologia busca responder são:
     <!-- http://localhost:8090/crimevoc#tv -->
 
     <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#tv">
-        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Electronic"/>
     </owl:NamedIndividual>
     
 

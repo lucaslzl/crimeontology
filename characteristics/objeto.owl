@@ -61,9 +61,9 @@
     
 
 
-    <!-- http://localhost:8090/objeto#Eletronic -->
+    <!-- http://localhost:8090/objeto#Electronic -->
 
-    <owl:Class rdf:about="http://localhost:8090/objeto#Eletronic">
+    <owl:Class rdf:about="http://localhost:8090/objeto#Electronic">
         <rdfs:subClassOf rdf:resource="http://localhost:8090/objeto#Object"/>
     </owl:Class>
     
