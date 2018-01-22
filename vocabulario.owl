@@ -322,8 +322,14 @@ As questões que esta ontologia busca responder são:
     <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#partOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://localhost:8090/objeto#Munition"/>
-        <rdfs:range rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
-        <rdfs:range rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/objeto#FireWeapon"/>
+                    <rdf:Description rdf:about="http://localhost:8090/objeto#SpecialWeapon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:label xml:lang="en">part of</rdfs:label>
     </owl:ObjectProperty>
     
