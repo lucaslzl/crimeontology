@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1506990507629" name="http://localhost:8090/ec" uri="ec.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506990507629" name="http://localhost:8090/ec1" uri="ec1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506990507629" name="http://localhost:8090/ec2" uri="ec2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1506990507629" name="http://localhost:8090/ec3" uri="ec3.owl"/>
+    </group>
 </catalog>

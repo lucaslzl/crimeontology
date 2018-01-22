@@ -1,0 +1,3952 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8090/crimevoc#"
+     xml:base="http://localhost:8090/crimevoc"
+     xmlns:pessoa="http://localhost:8090/pessoa#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:dqv="http://www.w3.org/ns/dqv#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:objeto="http://localhost:8090/objeto#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:local="http://localhost:8090/local#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:crime="http://localhost:8090/crime#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://localhost:8090/crimevoc">
+        <owl:imports rdf:resource="http://localhost:8090/ec3"/>
+        <owl:imports rdf:resource="http://localhost:8090/ec1"/>
+        <owl:imports rdf:resource="http://localhost:8090/ec2"/>
+        <owl:imports rdf:resource="http://localhost:8090/objeto"/>
+        <owl:imports rdf:resource="http://localhost:8090/furto"/>
+        <owl:imports rdf:resource="http://localhost:8090/quality"/>
+        <owl:imports rdf:resource="http://localhost:8090/situacao"/>
+        <owl:imports rdf:resource="http://localhost:8090/pessoa"/>
+        <owl:imports rdf:resource="http://localhost:8090/local"/>
+        <owl:imports rdf:resource="http://localhost:8090/roubo"/>
+        <rdfs:comment xml:lang="pt">Objetivo:
+Está ontologia foi criada com o objetivo de representar e inferir situações de crimes, mais especificamente de roubo e furto segundo a jurisdição brasileira.
+
+Questões:
+As questões que esta ontologia busca responder são:
+- Dentre as possibilidades de situação de crime, define se o evento é um roubo (Art. 157) ou um furto (Art. 155) (assumimos que todos os dados em análise são necessariamente um crime)
+- Qual o nível do evento criminal é composto a situação, considerando a seguinte classificação:
+
+*Eventos Criminais de 1º Estágio (EC1) “CRIMES LEVES”. São os delitos praticados por criminosos iniciantes, divididos em dois grandes grupos; os que utilizam armas brancas, simulacros de arma de fogo e residualmente armas de fogo para intimidar vítimas pedestres na obtenção de bens de pequeno valor, como roupas, calçados, pequenas joias ou bijuterias, carteiras e bolsas, celulares, entre outros. E os que não utilizam armas e focam os mesmos pedestres, veículos (e seus rádios) e residências. Não utilizam ou utilizam um nível básico de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias de ação.
+
+*Eventos Criminais de 2º Estágio (EC2) “CRIMES MEDIANOS”. São os delitos praticados por criminosos medianos, que utilizam armas (principalmente revólveres e pistolas) para intimidar as vítimas de roubos, inclusive na modalidade “sequestros relâmpagos”, objetivam bens de médio e alto valor (principalmente veículos), empregam nível básico de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias da ação.
+
+*Eventos Criminais de 3º Estágio (EC3) “CRIMES GRAVES”. São os delitos praticados por criminosos mais sofisticados, que utilizam maior quantidade e variedade de armas, que ampliam sua vantagem no confronto com a Polícia Militar e seguranças/escolta de empresas, banco, carga ou sequestráveis. Objetivam grandes quantias em dinheiro ou bens de alto valor, empregam alto nível de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias de ação.
+
+- Quais são os elementos e características específicas do evento criminal
+
+Objetivo:
+Está ontologia foi criada com o objetivo de representar e inferir situações de crimes, mais especificamente de roubo e furto segundo a jurisdição brasileira.
+
+Questões:
+As questões que esta ontologia busca responder são:
+- Dentre as possibilidades de situação de crime, define se o evento é um roubo (Art. 157) ou um furto (Art. 155) (assumimos que todos os dados em análise são necessariamente um crime)
+- Qual o nível do evento criminal é composto a situação, considerando a seguinte classificação:
+
+*Eventos Criminais de 1º Estágio (EC1) “CRIMES LEVES”. São os delitos praticados por criminosos iniciantes, divididos em dois grandes grupos; os que utilizam armas brancas, simulacros de arma de fogo e residualmente armas de fogo para intimidar vítimas pedestres na obtenção de bens de pequeno valor, como roupas, calçados, pequenas joias ou bijuterias, carteiras e bolsas, celulares, entre outros. E os que não utilizam armas e focam os mesmos pedestres, veículos (e seus rádios) e residências. Não utilizam ou utilizam um nível básico de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias de ação.
+
+*Eventos Criminais de 2º Estágio (EC2) “CRIMES MEDIANOS”. São os delitos praticados por criminosos medianos, que utilizam armas (principalmente revólveres e pistolas) para intimidar as vítimas de roubos, inclusive na modalidade “sequestros relâmpagos”, objetivam bens de médio e alto valor (principalmente veículos), empregam nível básico de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias da ação.
+
+*Eventos Criminais de 3º Estágio (EC3) “CRIMES GRAVES”. São os delitos praticados por criminosos mais sofisticados, que utilizam maior quantidade e variedade de armas, que ampliam sua vantagem no confronto com a Polícia Militar e seguranças/escolta de empresas, banco, carga ou sequestráveis. Objetivam grandes quantias em dinheiro ou bens de alto valor, empregam alto nível de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias de ação.
+
+- Quais são os elementos e características específicas do evento criminal</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+        <terms:title>URBANITY Human-driven Brazilian Crime Ontology</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8090/local#nome_local -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/local#nome_local"/>
+    
+
+
+    <!-- http://localhost:8090/local#numero -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/local#numero">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Arma"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://localhost:8090/local#rua -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/local#rua"/>
+    
+
+
+    <!-- http://localhost:8090/objeto#calibre -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/objeto#calibre"/>
+    
+
+
+    <!-- http://localhost:8090/objeto#cor_objeto -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/objeto#cor_objeto"/>
+    
+
+
+    <!-- http://localhost:8090/objeto#cor_veiculo -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/objeto#cor_veiculo"/>
+    
+
+
+    <!-- http://localhost:8090/objeto#modelo -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/objeto#modelo"/>
+    
+
+
+    <!-- http://localhost:8090/objeto#nome -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/objeto#nome"/>
+    
+
+
+    <!-- http://localhost:8090/objeto#placa -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/objeto#placa"/>
+    
+
+
+    <!-- http://localhost:8090/objeto#tipo_veiculo -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/objeto#tipo_veiculo"/>
+    
+
+
+    <!-- http://localhost:8090/pessoa#cor -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/pessoa#cor">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Objeto"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://localhost:8090/pessoa#genero -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/pessoa#genero"/>
+    
+
+
+    <!-- http://localhost:8090/pessoa#quantidade_pessoas -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8090/pessoa#quantidade_pessoas"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#inDimension -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dqv#inDimension"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#isMeasurementOf -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dqv#isMeasurementOf"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#value -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dqv#value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8090/objeto#Arma -->
+
+    <rdfs:Datatype rdf:about="http://localhost:8090/objeto#Arma"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8090/crimevoc#affects -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#affects">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/crime#Crime"/>
+        <rdfs:range rdf:resource="http://localhost:8090/pessoa#Victim"/>
+        <rdfs:label xml:lang="pt">afeta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#carry -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#carry">
+        <rdfs:subPropertyOf rdf:resource="http://localhost:8090/crimevoc#have"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+        <rdfs:range rdf:resource="http://localhost:8090/objeto#Weapon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#classify -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#classify">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/ec#EC"/>
+        <rdfs:range rdf:resource="http://localhost:8090/crime#Crime"/>
+        <rdfs:label xml:lang="pt">classifica</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#has -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#has">
+        <rdfs:subPropertyOf rdf:resource="http://localhost:8090/crimevoc#have"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#have -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#have"/>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#haveContactWith -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#haveContactWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/crime#Crime"/>
+        <rdfs:range rdf:resource="http://localhost:8090/pessoa#Victim"/>
+        <rdfs:label xml:lang="en">have contact with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#isRobbedBy -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#isRobbedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Victim"/>
+        <rdfs:range rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+        <rdfs:label xml:lang="en">is robbed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#isTheftBy -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#isTheftBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Victim"/>
+        <rdfs:range rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+        <rdfs:label xml:lang="en">is theft by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#occursIn -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#occursIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/crime#Crime"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#occursIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://localhost:8090/local#Local"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">occurs in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#occursInTransport -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#occursInTransport">
+        <rdfs:subPropertyOf rdf:resource="http://localhost:8090/crimevoc#occursIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/crime#Crime"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#occursInTransport"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://localhost:8090/local#Local"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">occurs in transport</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#partOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Munition"/>
+        <rdfs:range rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+        <rdfs:range rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#performed -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#performed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/crime#Crime"/>
+        <rdfs:range rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#robbery -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#robbery">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+        <rdfs:range rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://localhost:8090/pessoa#Victim"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#theft -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#theft">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+        <rdfs:range rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://localhost:8090/pessoa#Victim"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#uses -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8090/crimevoc#uses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+        <rdfs:range rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8090/crimevoc#age -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#age">
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#amount -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#amount"/>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#brand -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#brand">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#caliber -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#caliber">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#city -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#city">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#district -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#district">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#drugAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#drugAmount">
+        <rdfs:subPropertyOf rdf:resource="http://localhost:8090/crimevoc#amount"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">drug amount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#genre -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#genre">
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#localName -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#localName">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">local name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#localNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#localNumber">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:label xml:lang="en">local number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#model -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#model">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#neighborhood -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#neighborhood">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#objectAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#objectAmount">
+        <rdfs:subPropertyOf rdf:resource="http://localhost:8090/crimevoc#amount"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">object amount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#objectColor -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#objectColor">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">object color</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#objectName -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#objectName">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">object name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#peopleAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#peopleAmount">
+        <rdfs:subPropertyOf rdf:resource="http://localhost:8090/crimevoc#amount"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">people amount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#personColor -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#personColor">
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">person color</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#personHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#personHeight">
+        <rdfs:domain rdf:resource="http://localhost:8090/pessoa#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">person height</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#postalCode">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">postal code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#state -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#state">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#street -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#street">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#type -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#type">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#vehicleColor -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#vehicleColor">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">vehicle color</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#vehiclePlate -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#vehiclePlate">
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">vehicle plate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#vehicleType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/crimevoc#vehicleType">
+        <rdfs:subPropertyOf rdf:resource="http://localhost:8090/crimevoc#type"/>
+        <rdfs:domain rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">vehicle type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8090/crime#Crime -->
+
+    <rdf:Description rdf:about="http://localhost:8090/crime#Crime">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/situacao#Situation"/>
+        <rdfs:comment xml:lang="pt">Classe que define os tipos de crimes descritos pelo código penal brasileiro e que serão tratados nessa ontologia, especificamente roubo (Art. 157) e furto (Art. 155)</rdfs:comment>
+        <rdfs:label>Crime</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Bank -->
+
+    <owl:Class rdf:about="http://localhost:8090/crimevoc#Bank">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/local#Commerce"/>
+        <rdfs:comment xml:lang="pt">Especificação para Locais de Comércio, focado apenas em locais de comércio bancário</rdfs:comment>
+        <rdfs:label xml:lang="en">Bank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Car -->
+
+    <owl:Class rdf:about="http://localhost:8090/crimevoc#Car">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+        <rdfs:comment xml:lang="pt">Classe derivada de Veículo, dedicada a especifícação apenas de Carros</rdfs:comment>
+        <rdfs:label xml:lang="en">Car</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Device -->
+
+    <owl:Class rdf:about="http://localhost:8090/crimevoc#Device">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:comment xml:lang="pt">Derivação da classe Objeto, responsável por representar dispostivos de uso comum, especialmente celulares</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Disguise -->
+
+    <owl:Class rdf:about="http://localhost:8090/crimevoc#Disguise">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/objeto#Clothing"/>
+        <rdfs:comment xml:lang="pt">Derivada da classe Vestuário, com foco nos possiveis disfarces utilizados por criminosos em eventos criminais</rdfs:comment>
+        <rdfs:label xml:lang="en">Disguise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Jewels -->
+
+    <owl:Class rdf:about="http://localhost:8090/crimevoc#Jewels">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, responsável por descrever objetos relacionados a jóias, pedras e relógios</rdfs:comment>
+        <rdfs:label xml:lang="en">Jewels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Money -->
+
+    <owl:Class rdf:about="http://localhost:8090/crimevoc#Money">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/objeto#Object"/>
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, responsável por representar informações de valor monetário, como dinheiro e cartão de crédito</rdfs:comment>
+        <rdfs:label xml:lang="en">Money</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Road -->
+
+    <owl:Class rdf:about="http://localhost:8090/crimevoc#Road">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/local#Public"/>
+        <rdfs:comment xml:lang="pt">Especificação de Local Público, apenas destinado para vias de circulação comuns, como estradas ou avenidas</rdfs:comment>
+        <rdfs:label xml:lang="en">Road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/ec#EC -->
+
+    <rdf:Description rdf:about="http://localhost:8090/ec#EC">
+        <rdfs:comment xml:lang="pt">Classe para definição do Evento Criminal e sua respectiva classificação, que segue dividida em três níveis: 1, 2 e 3. Específicado nas classes derivadas</rdfs:comment>
+        <rdfs:label xml:lang="pt">EC</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/ec1#EC1 -->
+
+    <rdf:Description rdf:about="http://localhost:8090/ec1#EC1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/ec#EC"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#have"/>
+                                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#have"/>
+                                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#classify"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/crime#Crime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://localhost:8090/ec2#EC2"/>
+        <owl:disjointWith rdf:resource="http://localhost:8090/ec3#EC3"/>
+        <rdfs:comment xml:lang="pt">Eventos Criminais de 1º Estágio (EC1) englobam os crimes que apresentam pouca letalidade e executado por criminosos pouco sofisticados</rdfs:comment>
+        <rdfs:label xml:lang="pt">EC1</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/ec2#EC2 -->
+
+    <rdf:Description rdf:about="http://localhost:8090/ec2#EC2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/ec#EC"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#classify"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/crime#Crime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#have"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://localhost:8090/ec3#EC3"/>
+        <rdfs:comment xml:lang="pt">São os delitos praticados por criminosos medianos, que utilizam armas (principalmente revólveres e pistolas) para intimidar as vítimas de roubos, inclusive na modalidade “seqüestros relâmpagos”, objetivam bens de médio e alto valor (principalmente veículos), empregam nível básico de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias da ação</rdfs:comment>
+        <rdfs:label xml:lang="pt">EC2</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/ec3#EC3 -->
+
+    <rdf:Description rdf:about="http://localhost:8090/ec3#EC3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/ec#EC"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#classify"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/crime#Crime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#have"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="pt">São os delitos praticados por criminosos mais sofisticados, que utilizam maior quantidade e variedade de armas, que ampliam sua vantagem no confronto com a Polícia Militar e seguranças/escolta de empresas, banco, carga ou seqüestráveis. Objetivam grandes quantias em dinheiro ou bens de alto valor, empregam alto nível de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias de ação</rdfs:comment>
+        <rdfs:label xml:lang="pt">EC3</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/furto#Theft -->
+
+    <rdf:Description rdf:about="http://localhost:8090/furto#Theft">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/crime#Crime"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#haveContactWith"/>
+                                <owl:someValuesFrom rdf:resource="http://localhost:8090/pessoa#Victim"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#affects"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/pessoa#Victim"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#have"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#Object"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#occursIn"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/local#Local"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#performed"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://localhost:8090/roubo#Robbery"/>
+        <rdfs:comment xml:lang="pt">Classe que define o crime de furto (Art. 155), segundo o código penal brasileiro</rdfs:comment>
+        <rdfs:label xml:lang="en">Theft</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Commerce -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Commerce">
+        <rdfs:comment xml:lang="pt">Especificação de Local Privado, destinado apenas a locais de comércio. Por exemplo: Loja ou Bar. Com mais uma classe específica para bancos</rdfs:comment>
+        <rdfs:label xml:lang="en">Commerce</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Education -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Education">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/local#Local"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://localhost:8090/local#Private"/>
+                            <rdf:Description rdf:about="http://localhost:8090/local#Public"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pt">Especificação de local, responsável por caracterizar locais relacionados a educação, por exemplo: universidade. Este tipo pode ser tanto privado quanto público</rdfs:comment>
+        <rdfs:label xml:lang="en">Education</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Entertainment -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Entertainment">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/local#Local"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://localhost:8090/local#Private"/>
+                            <rdf:Description rdf:about="http://localhost:8090/local#Public"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pt">Especificação de local, responsável por caracterizar locais relacionados a entretenimento, por exemplo: show. Este tipo pode ser tanto privado quanto público</rdfs:comment>
+        <rdfs:label xml:lang="en">Entertainment</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Local -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Local">
+        <rdfs:comment xml:lang="pt">Classe que descreve os possíveis locais relacionados em situações de crimes, está relacionada tanto com a vítima quanto com o criminoso, podendo ser o local do evento, referência ou rota de fuga. Conta uma especificação principal entre locais públicos e privados, junto a classes complementares relacionadas a locais de transporte, entretenimento e educação</rdfs:comment>
+        <rdfs:label xml:lang="en">Local</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Private -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Private">
+        <rdfs:comment xml:lang="pt">Especificação de classe Local, destinada a classificação de locais privados particulares. Sendo derivado em duas classes mais específicas, sendo: Residencial e Comercial</rdfs:comment>
+        <rdfs:label xml:lang="en">Private</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Public -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Public">
+        <rdfs:comment xml:lang="pt">Especificação de classe Local, destinada a classificação de locais públicos ou comuns ao grande público. Conta com mais uma especificação destinada apenas a locais relacionados a vias de circulação</rdfs:comment>
+        <rdfs:label xml:lang="en">Public</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Residential -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Residential">
+        <rdfs:comment xml:lang="pt">Especificação de Local Privado, destinado apenas a locais residenciais ou utilizados como moradia. Por exemplo: apartamento ou barraco</rdfs:comment>
+        <rdfs:label xml:lang="en">Residential</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/local#Transport -->
+
+    <rdf:Description rdf:about="http://localhost:8090/local#Transport">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/local#Local"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://localhost:8090/local#Private"/>
+                            <rdf:Description rdf:about="http://localhost:8090/local#Public"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pt">Especificação de local, responsável por caracterizar locais relacionados a transorte, por exemplo: estação de trem. Este tipo pode ser tanto privado quanto público</rdfs:comment>
+        <rdfs:label xml:lang="en">Transport</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Accessory -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Accessory">
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, que representa todos os tipos acessórios pertencentes a vítima, dando foco para objetos passíveis de roubo e furto</rdfs:comment>
+        <rdfs:label xml:lang="en">Accessory</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Appliance -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Appliance">
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, que representa todos os tipos Eletrodomésticos presentes em residências e comércios, dando foco para objetos passiveis de roubo e furto</rdfs:comment>
+        <rdfs:label xml:lang="en">Appliance</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Clothing -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Clothing">
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, responsável por representar Vestuário, que pode caracterizar vítima ou criminoso presentes no evento criminal. Conta com uma especificação apenas para disfarces, focado no Criminoso</rdfs:comment>
+        <rdfs:label xml:lang="en">Clothing</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Document -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Document">
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, responsável por representar Documentos, normalmente relacionados como objeto da vítima</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Drug -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Drug">
+        <rdfs:comment xml:lang="pt">Derivação de Objeto, dedicada a relação de drogas e substâncias químicas de consumo. Sendo dividida em duas classes: Lícitas e Ilícitas</rdfs:comment>
+        <rdfs:label xml:lang="en">Drug</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Eletronic -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Eletronic">
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, que representa todos os tipos eletrônicos presentes em residências e comércios, dando foco para objetos passíveis de roubo e furto</rdfs:comment>
+        <rdfs:label xml:lang="en">Eletronic</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#FireWeapon -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#FireWeapon">
+        <rdfs:comment xml:lang="pt">Derivação da classe Arma, resonsável por definir Armas de Fogo ou Disparo, como por exemplo revolver</rdfs:comment>
+        <rdfs:label xml:lang="en">FireWeapon</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Illicit -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Illicit">
+        <rdfs:comment xml:lang="pt">Especificação da classe de Droga, responsável por substâncias ilícitas, por exemplo: Maconha e Cocaína</rdfs:comment>
+        <rdfs:label xml:lang="en">Illicit</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Licit -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Licit">
+        <rdfs:comment xml:lang="pt">Especificação de classe de Droga, responsável por substâncias lícitas, de venda e consumo liberados, por exemplo: Cigarro e Cerveja</rdfs:comment>
+        <rdfs:label xml:lang="en">Licit</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#LightWeapon -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#LightWeapon">
+        <rdfs:comment xml:lang="pt">Especificação de classe de Arma, que representa armamento leves normalmente de corte ou perfuração, de fácil acesso e que podem ser improvisados a partir de objetos comuns. Por exemplo: faca ou agulha</rdfs:comment>
+        <rdfs:label xml:lang="en">LightWeapon</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Munition -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Munition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto e relacionada as classes de Armas de Fogo e Especial, indicando o presença ou especificação de armas presentes no evento criminal</rdfs:comment>
+        <rdfs:label xml:lang="en">Munition</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Object -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Object">
+        <rdfs:comment xml:lang="pt">Classe que descreve todos os objetos que podem estar relacionados de alguma maneira com a situação de crime, tanto da vítima, objeto roubado, quanto do criminoso, como por exemplo, arma do crime ou carro de fuga</rdfs:comment>
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#SpecialWeapon -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#SpecialWeapon">
+        <rdfs:comment xml:lang="pt">Especificação de classe de Arma, que representa armamento de grosso calibre ou explosivos, normalmente de uso restrito, como metralhadoras</rdfs:comment>
+        <rdfs:label xml:lang="en">SpecialWeapon</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Vehicle -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Vehicle">
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, que representa qualquer tipo de veículo, contando com uma especificação apenas para Carros. Esta classe pode tanto estar relacionada como objeto da vítima ou de fuga do criminoso</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/objeto#Weapon -->
+
+    <rdf:Description rdf:about="http://localhost:8090/objeto#Weapon">
+        <rdfs:comment xml:lang="pt">Classe derivada de Objeto, que defina as possíveis variações de arma presentes nas situações de crime, seguindo uma divisão em três classes específicas: arma branca, arma de fogo e arma especial</rdfs:comment>
+        <rdfs:label xml:lang="en">Weapon</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/pessoa#Criminal -->
+
+    <rdf:Description rdf:about="http://localhost:8090/pessoa#Criminal">
+        <owl:disjointWith rdf:resource="http://localhost:8090/pessoa#Denouncer"/>
+        <owl:disjointWith rdf:resource="http://localhost:8090/pessoa#Victim"/>
+        <rdfs:comment xml:lang="pt">Classe derivada de Pessoa, que tem o papel de representar especificamente o elemento do criminoso nas ações, junto com suas características</rdfs:comment>
+        <rdfs:label xml:lang="en">Criminal</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/pessoa#Denouncer -->
+
+    <rdf:Description rdf:about="http://localhost:8090/pessoa#Denouncer">
+        <owl:equivalentClass rdf:resource="http://localhost:8090/pessoa#Victim"/>
+        <rdfs:comment xml:lang="pt">Classe derivada de Pessoa, que representa o papel do denunciante de uma situação. Dependendo da situação, pode também assumir o papel de vítima</rdfs:comment>
+        <rdfs:label xml:lang="en">Denouncer</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/pessoa#Person -->
+
+    <rdf:Description rdf:about="http://localhost:8090/pessoa#Person">
+        <rdfs:comment xml:lang="pt">Classe que define os tipos de pessoas envolvidas nas situações de crime, existindo três variações: Criminoso, Vítima e Denunciante</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/pessoa#Victim -->
+
+    <rdf:Description rdf:about="http://localhost:8090/pessoa#Victim">
+        <rdfs:comment xml:lang="pt">Classe derivada de Pessoa, representa o papel da vítima nas situações de crime (pessoa que sofre a ação),  junto com suas características. Conforme a situação, pode ser equivalente também ao denunciante</rdfs:comment>
+        <rdfs:label xml:lang="en">Victim</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://localhost:8090/roubo#Robbery -->
+
+    <owl:Class rdf:about="http://localhost:8090/roubo#Robbery">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost:8090/crime#Crime"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#affects"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/pessoa#Victim"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#have"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/objeto#Object"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#haveContactWith"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/pessoa#Victim"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#occursIn"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/local#Local"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8090/crimevoc#performed"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="pt">Classe que define o crime de roubo (Art. 157), segundo o código penal brasileiro</rdfs:comment>
+        <rdfs:label xml:lang="en">Robbery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8090/situacao#Situation -->
+
+    <rdf:Description rdf:about="http://localhost:8090/situacao#Situation">
+        <rdfs:comment xml:lang="pt">Está classe representa um crime propriamente dito, independente do tipo ou classificação. Geralmente uma situação é composta por eventos criminais e elementos que caracterizam um crime, como por exemplo: vítima, local e objetos roubados</rdfs:comment>
+        <rdfs:label xml:lang="en">Situation</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Atualidade -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#Atualidade">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Completude -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#Completude">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#Consistencia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#Consistencia">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaAltura -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaAltura">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaArmaCrime -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaArmaCrime">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaAtualidade -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaAtualidade">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Atualidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaCompletude -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaCompletude">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaCondicaoVitima -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaCondicaoVitima">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaConsistencia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaConsistencia">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Consistencia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaCorCabelo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaCorCabelo">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaDescricaoCriminoso -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaDescricaoCriminoso">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaGenero -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaGenero">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaHorarioRoubo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaHorarioRoubo">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Atualidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaHorarioSistema -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaHorarioSistema">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Atualidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaIdade -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaIdade">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaLocalInformado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaLocalInformado">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaObjetoRoubado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaObjetoRoubado">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaStatusCriminoso -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaStatusCriminoso">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Atualidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaTatuagens -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaTatuagens">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaTempoGasto -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaTempoGasto">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Atualidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#MetricaTempoReportado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#MetricaTempoReportado">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <dqv:inDimension rdf:resource="http://localhost:8090/crimevoc#Atualidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#adaga -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#adaga">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#agente_de_saude -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#agente_de_saude">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#agulha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#agulha">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ak -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ak">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#ak47"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#ak_47"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ak47 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ak47">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#ak_47"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ak_47 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ak_47">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#alcool -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#alcool">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Licit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#anfetamina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#anfetamina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#aparelho_celular -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#aparelho_celular">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#apartamento -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#apartamento">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ar15 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ar15">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#ar_15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ar_15 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ar_15">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ar_condicionado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ar_condicionado">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#arena -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#arena">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#arma -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#arma">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#arma_de_brinquedo"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#arma_de_fogo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#arma_branca -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#arma_branca">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#arma_de_brinquedo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#arma_de_brinquedo">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#arma_de_fogo"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#simulacro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#arma_de_fogo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#arma_de_fogo">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#armazem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#armazem">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#arrebatado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#arrebatado">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Victim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#assaltado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#assaltado">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Victim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#assaltante -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#assaltante">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#autor -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#autor">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#avenida -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#avenida">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#aviao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#aviao">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bala -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bala">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Munition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#balaclava -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#balaclava">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#banana_de_dinamite -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#banana_de_dinamite">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#banca_de_jornal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#banca_de_jornal">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#banco_do_brasil -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#banco_do_brasil">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#banco_do_estado_de_santa_catarina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#banco_do_estado_de_santa_catarina">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bandido -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bandido">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bar">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#barco -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#barco">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#barraca -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#barraca">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#barraco -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#barraco">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bebedouro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bebedouro">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bebiba_alcoolica -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bebiba_alcoolica">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Licit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bereta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bereta">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#beretta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#beretta">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bicicleta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bicicleta">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bike -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bike">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bolsa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bolsa">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Accessory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bomba -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bomba">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#boteco -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#boteco">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#botequim -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#botequim">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bradesco -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bradesco">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#bronze -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#bronze">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cachaca -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cachaca">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Licit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cadastro_de_pessoas_fisicas -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cadastro_de_pessoas_fisicas">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#cpf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#caixa_economica_federal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#caixa_economica_federal">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#calibre_12 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#calibre_12">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#caminhao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#caminhao">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#canivete -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#canivete">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cannabis_sativa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cannabis_sativa">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#maconha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cantina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cantina">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#capacete -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#capacete">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#capsula -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#capsula">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Munition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cara -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cara">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#carabina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#carabina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#carro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#carro">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cartao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cartao">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Money"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cartao_de_credito -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cartao_de_credito">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Money"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cartao_de_debito -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cartao_de_debito">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Money"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#carteira -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#carteira">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Accessory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#carteira_de_estudante -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#carteira_de_estudante">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#carteira_nacional_de_habilitacao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#carteira_nacional_de_habilitacao">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#cnh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#casa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#casa">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#casa_loterica -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#casa_loterica">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cel">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#celta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#celta">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#celular -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#celular">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#centro_esportivo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#centro_esportivo">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#certificado_de_registro_e_licenciamento_de_veiculo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#certificado_de_registro_e_licenciamento_de_veiculo">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cerveja -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cerveja">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Licit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#chacara -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#chacara">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#fazenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cheque -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cheque">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Money"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#chuco -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#chuco">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cigarro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cigarro">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Licit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cinema -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cinema">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#civic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#civic">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#claro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#claro">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#clava -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#clava">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#clube -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#clube">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cnh -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cnh">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cocaina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cocaina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#comercio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#comercio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#computador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#computador">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#concessionaria_de_agua -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#concessionaria_de_agua">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#concessionaria_de_gas -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#concessionaria_de_gas">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#concessionaria_de_luz -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#concessionaria_de_luz">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#consultorio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#consultorio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cordao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cordao">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#corolla -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#corolla">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#correio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#correio">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#corrente -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#corrente">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#corsa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#corsa">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cortiço -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cortiço">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cpf -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cpf">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#crack -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#crack">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#criminal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#criminal">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#criminoso -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#criminoso">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#culpado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#culpado">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cursinho -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cursinho">
+        <rdf:type rdf:resource="http://localhost:8090/local#Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#curso -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#curso">
+        <rdf:type rdf:resource="http://localhost:8090/local#Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#cutelo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#cutelo">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#delinquente -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#delinquente">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#diamante -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#diamante">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#dimetiltriptamina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#dimetiltriptamina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#dmt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#dinamite -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#dinamite">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#dinheiro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#dinheiro">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Money"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#dmt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#dmt">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#documento -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#documento">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ecstasy -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ecstasy">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#elemento -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#elemento">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#eletronico -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#eletronico">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#embarcacao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#embarcacao">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#embratel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#embratel">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#empresa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#empresa">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#entregador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#entregador">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#escola -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#escola">
+        <rdf:type rdf:resource="http://localhost:8090/local#Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#escopeta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#escopeta">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#escritorio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#escritorio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#esmeralda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#esmeralda">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#espada -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#espada">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#katana"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#espingarda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#espingarda">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#estacao_metro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#estacao_metro">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#estacionamento -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#estacionamento">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#estadio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#estadio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#ginasio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#estilete -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#estilete">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#estrada -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#estrada">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#exercito -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#exercito">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#explosivo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#explosivo">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#faca -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#faca">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#facao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#facao">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#faculdade -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#faculdade">
+        <rdf:type rdf:resource="http://localhost:8090/local#Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#farinha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#farinha">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#heroina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#farmacia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#farmacia">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#fazenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#fazenda">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#sitio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#fit -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#fit">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#florista -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#florista">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#fogao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#fogao">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#foice -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#foice">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#foise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#foise -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#foise">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#forca_aerea -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#forca_aerea">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#forno -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#forno">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#forum -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#forum">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#fuzil -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#fuzil">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#garrucha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#garrucha">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#garucha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#garucha">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#geladeira -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#geladeira">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#gilete -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#gilete">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#navalha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ginasio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ginasio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#gol -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#gol">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#golf -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#golf">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#granada -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#granada">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#graph1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#graph1">
+        <rdf:type rdf:resource="http://purl.org/eis/vocab/daq#QualityGraph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#heroina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#heroina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#home_theater -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#home_theater">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#hospedaria -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#hospedaria">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#hospital -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#hospital">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#posto_de_saude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#hostel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#hostel">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#hotel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#hotel">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#igreja -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#igreja">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#imovel_abandonado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#imovel_abandonado">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#individuo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#individuo">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#industria -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#industria">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#infrator -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#infrator">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#itau -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#itau">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#joia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#joia">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#katana -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#katana">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#kubotan -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#kubotan">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#yawara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ladra -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ladra">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ladrao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ladrao">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#lanchonete -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#lanchonete">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#laptop -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#laptop">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#lavadora -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#lavadora">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#logradouro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#logradouro">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#loja -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#loja">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#loterica -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#loterica">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#lsd -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#lsd">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#m16 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#m16">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#macarico -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#macarico">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#machado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#machado">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#maconha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#maconha">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#malfeitor -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#malfeitor">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#maquina_de_lavar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#maquina_de_lavar">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#marginal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#marginal">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Road"/>
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#marinha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#marinha">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#martelo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#martelo">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#md -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#md">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#meliante -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#meliante">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#mercado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#mercado">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#merla -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#merla">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#metanfetamina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#metanfetamina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#metralhadora -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#metralhadora">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#metro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#metro">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#michael_douglas -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#michael_douglas">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#microondas -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#microondas">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#microsystem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#microsystem">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#mira_laser -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#mira_laser">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#mk -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#mk">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#mochila -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#mochila">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Accessory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#molly -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#molly">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#morfina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#morfina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#moto -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#moto">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#motocicleta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#motocicleta">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#motor_home -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#motor_home">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#municao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#municao">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Munition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#navalha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#navalha">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#negociador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#negociador">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#nextel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#nextel">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#nossa_caixa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#nossa_caixa">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#not -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#not"/>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#note -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#note">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#notebook -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#notebook">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#oculos -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#oculos">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#oficina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#oficina">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#oi -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#oi">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#onibus -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#onibus">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#operador_de_tv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#operador_de_tv">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#opio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#opio">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ouro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ouro">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#oxi -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#oxi">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#padaria -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#padaria">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#palio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#palio">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#passe -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#passe">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Money"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pasta_base -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pasta_base">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#peixeira -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#peixeira">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pensao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pensao">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pente -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pente">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Munition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#perua -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#perua">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#pirua"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#phone -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#phone">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#picareta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#picareta">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pique -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pique">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pirua -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pirua">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pistola -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pistola">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pizzaria -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pizzaria">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#polica_militar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#polica_militar">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#policia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#policia">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#policia_civil -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#policia_civil">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#policia_federal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#policia_federal">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ponto_de_onibus -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ponto_de_onibus">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+        <owl:sameAs rdf:resource="http://localhost:8090/crimevoc#terminal_de_onibus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ponto_de_taxi -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ponto_de_taxi">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#porrete -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#porrete">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#porto -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#porto">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#posto_de_gasolina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#posto_de_gasolina">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#posto_de_saude -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#posto_de_saude">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#poupa_tempo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#poupa_tempo">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pousada -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pousada">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#praca -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#praca">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#prata -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#prata">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#projetil -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#projetil">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Munition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#psilocibina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#psilocibina">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#pulseira -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#pulseira">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#punhal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#punhal">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#punto -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#punto">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#qlt1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#qlt1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+        <dqv:isMeasurementOf rdf:resource="http://localhost:8090/crimevoc#MetricaConsistencia"/>
+        <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dqv:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#qlt2 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#qlt2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+        <dqv:isMeasurementOf rdf:resource="http://localhost:8090/crimevoc#Completude"/>
+        <dqv:value>90%</dqv:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#quadrilha -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#quadrilha">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#quartel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#quartel">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#receptador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#receptador">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#registro_de_pessoa_fisica -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#registro_de_pessoa_fisica">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#registro_nacional_de_pessoa_fisica -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#registro_nacional_de_pessoa_fisica">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#relogio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#relogio">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#residencia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#residencia">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#restaurante -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#restaurante">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#revolver -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#revolver">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#rodeio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#rodeio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#rodovia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#rodovia">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#rolex -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#rolex">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#roubado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#roubado">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Victim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#roubador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#roubador">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#rua -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#rua">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#rubi -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#rubi">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#santander -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#santander">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Bank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#sequestrador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#sequestrador">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#shopping -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#shopping">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#shopping_center -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#shopping_center">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#show -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#show">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#silenciador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#silenciador">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#SpecialWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#simulacro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#simulacro">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#FireWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#sitio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#sitio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#skunk -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#skunk">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Illicit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#smartphone -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#smartphone">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#soco_ingles -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#soco_ingles">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#supermercado -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#supermercado">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#suspeito -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#suspeito">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#teatro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#teatro">
+        <rdf:type rdf:resource="http://localhost:8090/local#Entertainment"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#telefone -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#telefone">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#telefonica -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#telefonica">
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#televisao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#televisao">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#terminal_de_onibus -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#terminal_de_onibus">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#terminal_portuario -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#terminal_portuario">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#terreno_baldio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#terreno_baldio">
+        <rdf:type rdf:resource="http://localhost:8090/local#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#tesoura -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#tesoura">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#tim -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#tim">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#topazio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#topazio">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Jewels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#touca_ninja -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#touca_ninja">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Disguise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#transgressor -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#transgressor">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Criminal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#tv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#tv">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Eletronic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#universidade -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#universidade">
+        <rdf:type rdf:resource="http://localhost:8090/local#Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#uno -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#uno">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#vale -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#vale">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Money"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#van -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#van">
+        <rdf:type rdf:resource="http://localhost:8090/local#Public"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Transport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#ventilador -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#ventilador">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#vicinal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#vicinal">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#vitima -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#vitima">
+        <rdf:type rdf:resource="http://localhost:8090/pessoa#Victim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#vivo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#vivo">
+        <rdf:type rdf:resource="http://localhost:8090/crimevoc#Device"/>
+        <rdf:type rdf:resource="http://localhost:8090/local#Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8090/crimevoc#yawara -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8090/crimevoc#yawara">
+        <rdf:type rdf:resource="http://localhost:8090/objeto#LightWeapon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://localhost:8090/pessoa#sexo">
+        <rdfs:comment>Sexo de uma pessoa</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,7 +1,23 @@
-# [Research Group of Human-Computer Interaction](https://gihc.compsi.univem.edu.br/)
+# Grupo de Pesquisa Interação Humano-Computador
 
 ## [COMPSI - Computing and Information System Research Lab](https://compsi.univem.edu.br/)
 
 ### [Univem - Centro Universitário Eurípides Soares de Marília](http://univem.edu.br/)
 
-We aim to create a crime ontology to apply semantic fusion to criminal data
+**Projeto:**
+Fusão Semântica de Informações em Sistemas de Gerenciamento de Emergências
+
+**Integrantes:**
+
+* Prof. Dr. Leonardo Castro Botega ([botega@univem.edu.br](mailto:botega@univem.edu.br));
+* Prof. Dr. Allan Cesar Moreira de Oliveira ([allan_oliveira@univem.edu.br](mailto:allan_oliveira@univem.edu.br));
+* Ms. Caio Saraiva Coneglian ([caio.coneglian@gmail.com](mailto:caio.coneglian@gmail.com));
+* Valdir Amancio Pereira Junior ([valdir.a.junior@gmail.com](mailto:valdir.a.junior@gmail.com));
+* Jordan Ferreira Saran ([jfsaran@gmail.com](mailto:jfsaran@gmail.com))
+* Matheus Ferraroni ([matheussanches531@gmail.com](mailto:matheussanches531@gmail.com));
+* Gustavo Marttos ([marttosc@gmail.com](mailto:marttosc@gmail.com));
+* Lucas Zanco Ladeira ([lznladeira@gmail.com](mailto:lznladeira@gmail.com)).
+
+
+Para executar utilize:
+python -m SimpleHTTPServer 8090

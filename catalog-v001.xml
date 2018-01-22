@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/quality" uri="quality.owl"/>
-    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/lucasladeira/ontologies/2017/7/untitled-ontology-259" uri="quality.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/situation" uri="situation/situation.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/furto" uri="crimes/furto.owl"/>
     <uri id="User Entered Import Resolution" name="http://localhost:8090/crime" uri="crimes/crime.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/roubo" uri="crimes/roubo.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/quality" uri="quality.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/objeto" uri="characteristics/objeto.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/ec2" uri="ecs/ec2.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/ec1" uri="ecs/ec1.owl"/>
     <uri id="User Entered Import Resolution" name="http://localhost:8090/ec" uri="ecs/ec.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/object" uri="characteristics/object.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/person" uri="characteristics/person.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/local" uri="characteristics/local.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/robbery" uri="crimes/robbery.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/theft" uri="crimes/theft.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/ec3" uri="ecs/ec3.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/ec2" uri="ecs/ec2.owl"/>
-    <uri id="Imports Wizard Entry" name="http://localhost:8090/ec1" uri="ecs/ec1.owl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/ec3" uri="ecs/ec3.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/local" uri="characteristics/local.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/pessoa" uri="characteristics/pessoa.owl"/>
+    <uri id="User Entered Import Resolution" name="http://localhost:8090/situacao" uri="situation/situacao.owl"/>
 </catalog>

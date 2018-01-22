@@ -1,147 +1,133 @@
-@prefix : <http://localhost:8090/local#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://localhost:8090/local> .
-
-<http://localhost:8090/local> rdf:type owl:Ontology .
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://localhost:8090/local#cep
-:cep rdf:type owl:DatatypeProperty ;
-     rdfs:subPropertyOf owl:topDataProperty ;
-     rdfs:domain :Local ;
-     rdfs:range xsd:string .
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8090/local#"
+     xml:base="http://localhost:8090/local"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://localhost:8090/local"/>
+    
 
 
-###  http://localhost:8090/local#city
-:city rdf:type owl:DatatypeProperty ;
-      rdfs:subPropertyOf owl:topDataProperty ;
-      rdfs:domain :Local ;
-      rdfs:range xsd:string .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-###  http://localhost:8090/local#district
-:district rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdfs:domain :Local ;
-          rdfs:range xsd:string .
+    <!-- http://localhost:8090/local#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/local#latitude">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://localhost:8090/local#latitude
-:latitude rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdfs:domain :Local ;
-          rdfs:range xsd:string .
+    <!-- http://localhost:8090/local#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8090/local#longitude">
+        <rdfs:domain rdf:resource="http://localhost:8090/local#Local"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://localhost:8090/local#longitude
-:longitude rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty ;
-           rdfs:domain :Local ;
-           rdfs:range xsd:string .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-###  http://localhost:8090/local#neighborhood
-:neighborhood rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Local ;
-              rdfs:range xsd:string .
+    <!-- http://localhost:8090/local#Commerce -->
+
+    <owl:Class rdf:about="http://localhost:8090/local#Commerce">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/local#Private"/>
+    </owl:Class>
+    
 
 
-###  http://localhost:8090/local#number
-:number rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf owl:topDataProperty ;
-        rdfs:domain :Local ;
-        rdfs:range xsd:positiveInteger .
+    <!-- http://localhost:8090/local#Education -->
+
+    <owl:Class rdf:about="http://localhost:8090/local#Education"/>
+    
 
 
-###  http://localhost:8090/local#state
-:state rdf:type owl:DatatypeProperty ;
-       rdfs:subPropertyOf owl:topDataProperty ;
-       rdfs:domain :Local ;
-       rdfs:range xsd:string .
+    <!-- http://localhost:8090/local#Entertainment -->
+
+    <owl:Class rdf:about="http://localhost:8090/local#Entertainment"/>
+    
 
 
-###  http://localhost:8090/local#street
-:street rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf owl:topDataProperty .
+    <!-- http://localhost:8090/local#Local -->
+
+    <owl:Class rdf:about="http://localhost:8090/local#Local"/>
+    
 
 
-###  http://www.w3.org/2002/07/owl#topDataProperty
-owl:topDataProperty rdfs:domain :Local ;
-                    rdfs:range xsd:string .
+    <!-- http://localhost:8090/local#Private -->
+
+    <owl:Class rdf:about="http://localhost:8090/local#Private">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/local#Local"/>
+        <owl:disjointWith rdf:resource="http://localhost:8090/local#Public"/>
+    </owl:Class>
+    
 
 
-#################################################################
-#    Classes
-#################################################################
+    <!-- http://localhost:8090/local#Public -->
 
-###  http://localhost:8090/local#Business
-:Business rdf:type owl:Class ;
-          rdfs:subClassOf :Private ;
-          owl:disjointWith :Education ,
-                           :Entertainment ,
-                           :Residential ,
-                           :Transport .
+    <owl:Class rdf:about="http://localhost:8090/local#Public">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/local#Local"/>
+    </owl:Class>
+    
 
 
-###  http://localhost:8090/local#Education
-:Education rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Class ;
-                             owl:unionOf ( :Private
-                                           :Public
-                                         )
-                           ] ;
-           owl:disjointWith :Entertainment ,
-                            :Residential ,
-                            :Transport .
+    <!-- http://localhost:8090/local#Residential -->
+
+    <owl:Class rdf:about="http://localhost:8090/local#Residential">
+        <rdfs:subClassOf rdf:resource="http://localhost:8090/local#Private"/>
+    </owl:Class>
+    
 
 
-###  http://localhost:8090/local#Entertainment
-:Entertainment rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Class ;
-                                 owl:unionOf ( :Private
-                                               :Public
-                                             )
-                               ] ;
-               owl:disjointWith :Residential ,
-                                :Transport .
+    <!-- http://localhost:8090/local#Transport -->
+
+    <owl:Class rdf:about="http://localhost:8090/local#Transport"/>
+    
 
 
-###  http://localhost:8090/local#Local
-:Local rdf:type owl:Class .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost:8090/local#Commerce"/>
+            <rdf:Description rdf:about="http://localhost:8090/local#Education"/>
+            <rdf:Description rdf:about="http://localhost:8090/local#Entertainment"/>
+            <rdf:Description rdf:about="http://localhost:8090/local#Residential"/>
+            <rdf:Description rdf:about="http://localhost:8090/local#Transport"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
 
 
-###  http://localhost:8090/local#Private
-:Private rdf:type owl:Class ;
-         rdfs:subClassOf :Local ;
-         owl:disjointWith :Public .
 
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
-###  http://localhost:8090/local#Public
-:Public rdf:type owl:Class ;
-        rdfs:subClassOf :Local .
-
-
-###  http://localhost:8090/local#Residential
-:Residential rdf:type owl:Class ;
-             rdfs:subClassOf :Private ;
-             owl:disjointWith :Transport .
-
-
-###  http://localhost:8090/local#Transport
-:Transport rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Class ;
-                             owl:unionOf ( :Private
-                                           :Public
-                                         )
-                           ] .
-
-
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
