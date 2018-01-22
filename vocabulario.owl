@@ -57,7 +57,7 @@ As questões que esta ontologia busca responder são:
 *Eventos Criminais de 3º Estágio (EC3) “CRIMES GRAVES”. São os delitos praticados por criminosos mais sofisticados, que utilizam maior quantidade e variedade de armas, que ampliam sua vantagem no confronto com a Polícia Militar e seguranças/escolta de empresas, banco, carga ou sequestráveis. Objetivam grandes quantias em dinheiro ou bens de alto valor, empregam alto nível de planejamento para definir vítimas, objetos a serem roubados e formas/circunstâncias de ação.
 
 - Quais são os elementos e características específicas do evento criminal</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
         <terms:title>URBANITY Human-driven Brazilian Crime Ontology</terms:title>
     </owl:Ontology>
     
@@ -1025,7 +1025,7 @@ As questões que esta ontologia busca responder são:
 
     <rdf:Description rdf:about="http://localhost:8090/objeto#Electronic">
         <rdfs:comment xml:lang="pt">Classe derivada de Objeto, que representa todos os tipos eletrônicos presentes em residências e comércios, dando foco para objetos passíveis de roubo e furto</rdfs:comment>
-        <rdfs:label xml:lang="en">Eletronic</rdfs:label>
+        <rdfs:label xml:lang="en">Electronic</rdfs:label>
     </rdf:Description>
     
 
