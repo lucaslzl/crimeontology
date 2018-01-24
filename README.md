@@ -1,4 +1,7 @@
-# Grupo de Pesquisa Interação Humano-Computador
+# Grupo de Interação Humano-Computador
+
+[Grupo de Pesquisa CNPQ](http://dgp.cnpq.br/dgp/espelhogrupo/3633167625728689)
+[Website GIHC](http://gihc.compsi.univem.edu.br/)
 
 ## [COMPSI - Computing and Information System Research Lab](https://compsi.univem.edu.br/)
 
@@ -17,7 +20,3 @@ Fusão Semântica de Informações em Sistemas de Gerenciamento de Emergências
 * Matheus Ferraroni ([matheussanches531@gmail.com](mailto:matheussanches531@gmail.com));
 * Gustavo Marttos ([marttosc@gmail.com](mailto:marttosc@gmail.com));
 * Lucas Zanco Ladeira ([lznladeira@gmail.com](mailto:lznladeira@gmail.com)).
-
-
-Para executar utilize:
-python -m SimpleHTTPServer 8090
