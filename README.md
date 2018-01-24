@@ -1,6 +1,7 @@
 # Grupo de Interação Humano-Computador
 
 [Grupo de Pesquisa CNPQ](http://dgp.cnpq.br/dgp/espelhogrupo/3633167625728689)
+
 [Website GIHC](http://gihc.compsi.univem.edu.br/)
 
 ## [COMPSI - Computing and Information System Research Lab](https://compsi.univem.edu.br/)
