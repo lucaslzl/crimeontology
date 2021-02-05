@@ -1,23 +1,8 @@
-# Grupo de Interação Humano-Computador
+# Crime Ontology
 
-[Grupo de Pesquisa CNPQ](http://dgp.cnpq.br/dgp/espelhogrupo/3633167625728689)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lucaslzl/crimeontology/issues)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[Website GIHC](http://gihc.compsi.univem.edu.br/)
+:cop: This is a crime ontology created with [Protégé](https://protege.stanford.edu/)
 
-## [COMPSI - Computing and Information System Research Lab](https://compsi.univem.edu.br/)
-
-### [Univem - Centro Universitário Eurípides Soares de Marília](http://univem.edu.br/)
-
-**Projeto:**
-Fusão Semântica de Informações em Sistemas de Gerenciamento de Emergências
-
-**Integrantes:**
-
-* Prof. Dr. Leonardo Castro Botega ([botega@univem.edu.br](mailto:botega@univem.edu.br));
-* Prof. Dr. Allan Cesar Moreira de Oliveira ([allan_oliveira@univem.edu.br](mailto:allan_oliveira@univem.edu.br));
-* Ms. Caio Saraiva Coneglian ([caio.coneglian@gmail.com](mailto:caio.coneglian@gmail.com));
-* Valdir Amancio Pereira Junior ([valdir.a.junior@gmail.com](mailto:valdir.a.junior@gmail.com));
-* Jordan Ferreira Saran ([jfsaran@gmail.com](mailto:jfsaran@gmail.com))
-* Matheus Ferraroni ([matheussanches531@gmail.com](mailto:matheussanches531@gmail.com));
-* Gustavo Marttos ([marttosc@gmail.com](mailto:marttosc@gmail.com));
-* Lucas Zanco Ladeira ([lznladeira@gmail.com](mailto:lznladeira@gmail.com)).
+:guard: The goal is to create a generic crime ontology to permit semantic searches.
